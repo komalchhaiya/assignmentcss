@@ -1,0 +1,124 @@
+
+<!-- • Question 1: What are media queries in CSS, and why are they important for responsive
+design?
+Media queries are CSS rules that make designs responsive by adapting styles to different 
+screen sizes like mobile, desktop and tablet.
+
+it is important because it make website responsive. can be adjusted different screen sizes like phones,
+ tablets, and desktops,  site looks good and is easy to use on any device.
+
+ • Question 2: Write a basic media query that adjusts the font size of a webpage for screens
+ smaller than 600px.
+
+ @media only screen and(max-width:600px){
+    body{}
+    } -->
+
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>responsive</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+        <script src='main.js'></script>
+        <style>
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar {
+    background-color: black;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.content {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.column {
+ 
+    padding: 15px;
+    border: 1px solid beige;
+    border-radius: 5px;
+    flex:1;
+    height: 360px;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .content {
+        flex-direction: column; 
+    }
+
+    .navbar {
+        text-align: center;
+        padding: 20px;
+    }
+    .footer {
+        text-align: center;
+        padding: 20px;}
+
+    body {
+        font-size: 16px; 
+        padding: 10px;
+    }
+}
+
+        </style>
+    </head>
+    <body>
+        <nav class="navbar">
+        <h1>My Website</h1>
+        <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        </ul>
+        </nav>
+        <main class="content">
+        <section class="column">
+        <h2>Column 1</h2>
+        <p> first column </p>
+        </section>
+         <section class="column">
+            <h2>Column 2</h2>
+            <p> second column </p>
+        </section>
+        </main>
+        <footer class="footer">
+            <p>&copy; 2024 My Website. All rights reserved.</p>
+        </footer>
+    </body>
+    </html>

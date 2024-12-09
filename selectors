@@ -1,0 +1,96 @@
+question1:
+What is a CSS selector? Provide examples of element, class, and ID selectors.
+
+css selector is path for the specific part which you want to style in css. 
+it can be done in three way :
+   [1] element selector
+   [2] id selector
+   [3] class selector?
+  
+    element selctor :
+    name is used as selector (specific tag name)
+    exa:   h1 {
+    color: blue;
+    }
+    
+    id selector:
+    only one element specified with unique id
+
+    example:
+    #div1{
+    margin: auto;
+    padding: auto;
+    color: blue;
+    }
+
+    class selector: 
+    specific class name givem , where one needs to be used for more than one time.
+    ex:  .class1 {
+        background-color: yellow;
+    }
+    
+
+
+question2
+Explain the concept of CSS specificity. How do conflicts between multiple stylesget
+resolved?
+---
+    CSS specificity is a used to determine which rules should be applied when there are multiple conflicting styles targeting the same element. 
+   
+    how conflict resolved:
+    The rule with the higher specificity wins. Specificity is determined by a system that assigns weights to different types of selectors:
+
+    Inline styles  have the highest weight.
+ID selectors (#id) are stronger than class selectors (.class) or element selectors (tag).
+Class selectors, attributes are stronger than element selectors
+
+
+
+• Question 3: What is the difference between internal, external, and inline CSS? Discuss the
+advantages and disadvantages of each approach.
+
+internal:
+
+internal css is used when there in no need of much styling for huge elements set.
+it is defined in heading part of code and used using style tag.
+<style>
+    h1 {
+        color: blue;
+    }
+</style>
+
+
+advantages:
+  -- easy for small code. 
+  -- keep html and css in one file only.
+  --Does not require external file loading, so styles apply immediately.
+
+disadvantages:
+--Increases the size of the HTML file.
+--Makes the code harder to maintain for larger projects.
+
+external:
+
+used for large code, external file is made for styling. and linked to html file
+link rel="stylesheet" href="styles.css"
+here styles.css will be file in which styling willl be done.
+
+advantages:
+--Allows reuse of the same stylesheet across multiple pages.
+--Keeps HTML files clean and smaller in size.
+--Easier to maintain for larger projects.
+
+disadvantages:
+--style will not be applied if link is not connected
+-- might be slow
+
+inline:
+written directly into tag by using style attribute into that tag.
+h1 style="color: red;">Hello World
+
+advantages:
+Applied immediately, without needing a separate file or style block.
+disadvantages
+-Increases the size of the file.
+- not used for large project
+- messy and hard to read

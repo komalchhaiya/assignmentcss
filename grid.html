@@ -1,0 +1,120 @@
+
+   <!-- • Question 1: Explain CSS Grid and how it differs from Flexbox. When would you use Grid over
+    Flexbox?
+    grid is way to arrange items and we can use it for raws and columns , and we can divide the container
+    into sections and place wherever we want.
+
+    grid is two dimensional like we can arrange in rows and columns like a table but in flexbox we can arrange in row or 
+    columns. 
+
+    use CSS Grid over Flexbox when  need to create layouts involving both rows and columns simultaneously, such as webpage , gallaries . Grid is best for complex, , Flexbox is suited for simple, one-dimensional layouts.
+
+
+    • Question 2: Describe the grid-template-columns, grid-template-rows, and grid-gap
+    properties. Provide examples of how to use them.
+
+
+    grid-template-columns:
+    This property defines the number and size of the columns in grid.
+    Example:
+    grid-template-columns: 100px 200px auto;
+    This creates three columns: the first is 100px wide, the second is 200px wide, and the third adjusts automatically.
+
+    grid-template-rows:
+    This property defines the number and size of the rows in your grid.
+    grid-template-rows: 50px auto 100px;
+
+    grid-gap (or gap):
+    This property adds space between rows and columns in your grid.
+    grid-gap: 10px 20px;
+
+     -->
+
+
+     <!DOCTYPE html>
+     <html>
+     <head>
+      <meta charset='utf-8'>
+      <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+      <title>grid</title>
+      <meta name='viewport' content='width=device-width, initial-scale=1'>
+      <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+      <script src='main.js'></script>
+      <style>
+        body {
+   
+    margin: 0;
+    padding: 0;
+    background-color:beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3); 
+    grid-gap: 20px; 
+    width: 80%;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid beige;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    height: 149px;
+    border-radius: 8px;
+}
+
+.product-title {
+    font-size: 18px;
+    margin: 10px 0;
+    color: darkgray;
+}
+
+.product-price {
+    font-size: 16px;
+    color: green;
+    font-weight: bold;
+}
+
+      </style>
+     </head>
+     <body>
+        <div class="products">
+            <div class="card">
+                <img src="product1.jpg" class="image">
+                <h3 class="product-title">Product 1</h3>
+                <p class="product-price">RS.2500</p>
+            </div>
+            <div class="card">
+                <img src="product2.jpg" class="image">
+                <h3 class="product-title">Product 2</h3>
+                <p class="product-price">RS.3000</p>
+            </div>
+            <div class="card">
+                <img src="product3.webp" class="image">
+                <h3 class="product-title">Product 3</h3>
+                <p class="product-price">RS.2000</p>
+            </div>
+        </div>
+      
+     </body>
+     </html>
+
+
+

@@ -1,0 +1,79 @@
+<!-- • Question 1: Explain the difference between web-safe fonts and custom web fonts. Whymight
+you use a web-safe font over a custom font?
+
+web safe fonts are already installed , it means pre intalled and works everywhere on all devices.
+
+web fonts , which we download by ourself either from web or google or anywhere. which offers
+unique style from the web fonts.
+
+we should use web fonts because it loads faster, they dont require download. and they work on all devices .
+
+Question 2: What is the font-family property in CSS? How do you apply a custom GoogleFont
+to a webpage?
+font-family in css used for styling fonts. used for different styling to make webpage look better.
+how to apply a custom googlefont:
+-- go to google choose a font, and copy the provided <link> tag . add link tag in head section,and use font-family.
+ -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Typography and Web Fonts</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <link href="https://fonts.google.com/" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: whitesmoke;
+            color: black;
+            text-align: center;
+            height: 500px;
+        }
+        .container{
+            margin: auto;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            height: 500px;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 10px;
+            color: brown;
+        }
+        h2 {
+            font-family: 'Playfair Display', serif;
+            
+            margin-bottom: 15px;
+            color: black;
+        }
+
+        p {
+            font-size: 30px;
+            margin-bottom: 15px;
+            text-align: justify;
+            color: brown;
+            margin-left: 110px;
+            margin-right: 110px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Blog Title</h1>
+        <h2>blog subtitle</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam inventore amet similique totam vel sed qui eaque tenetur, hic ex dolores itaque adipisci cum porro rem. Adipisci aut cupiditate natus!</p>
+    </div>
+</body>
+</html>
